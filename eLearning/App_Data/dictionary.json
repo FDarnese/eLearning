@@ -1,0 +1,86 @@
+﻿[
+  {
+    "uid": "css",
+    "display": "CSS",
+    "articles": [
+      {
+        "uid": "css-advanced",
+        "display": "CSS advanced concepts",
+        "description": "You will learn how to ....",
+        "featured": true,
+
+        "chapters": [
+          {
+            "uid": "chapter-1-advanced",
+            "display": "Chapter 1 of CSS",
+            "content": "css-advanced/chapter1.html"
+          },
+          {
+            "uid": "chapter-2-advanced",
+            "display": "Chapter 2 of CSS",
+            "content": "css-advanced/chapter2.html"
+          },
+          {
+            "uid": "chapter-3-advanced",
+            "display": "Chapter 3 of CSS",
+            "content": "css-advanced/chapter3.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uid": "js",
+    "display": "JavaScript",
+    "articles": [
+      {
+        "uid": "js-beginning",
+        "display": "Basic JavaScript concepts",
+        "description": "You will learn how to ....",
+        "featured": true,
+
+        "chapters": [
+          {
+            "uid": "chapter-1-advanced",
+            "display": "Chapter 1 of JavaScript basics",
+            "content": "js-beginning/chapter1.html"
+          },
+          {
+            "uid": "chapter-2-advanced",
+            "display": "Chapter 2of JavaScript basics",
+            "content": "js-beginning/chapter2.html"
+          },
+          {
+            "uid": "chapter-3-advanced",
+            "display": "Chapter 3 of JavaScript basics",
+            "content": "js-beginning/chapter3.html"
+          }
+        ]
+      },
+      {
+        "uid": "js-functions",
+        "display": "JavaScript functions and callbacks",
+        "description": "You will learn how to ....",
+        "featured": false,
+
+        "chapters": [
+          {
+            "uid": "chapter-1-advanced",
+            "display": "Chapter 1 of JavaScript functions",
+            "content": "js-functions/chapter1.html"
+          },
+          {
+            "uid": "chapter-2-advanced",
+            "display": "Chapter 2of JavaScript functions",
+            "content": "js-functions/chapter2.html"
+          },
+          {
+            "uid": "chapter-3-advanced",
+            "display": "Chapter 3 of JavaScript functions",
+            "content": "js-functions/chapter3.html"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - W3School.it</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="container-fluid logo-area">
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="@Url.Action("Index","Home")"><img src="~/Content/images/logo.png" class="logo" /></a>
+                <!-- @Html.ActionLink("W3School.it", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" }) -->
+            </div>
+            <div class="col-sm-8">
+                <h1>La più grande piattaforma gratuita Italiana per Web Developers</h1>
+            </div>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Impara", "Impara", "Home")</li>
+                    <li>@Html.ActionLink("Certificati", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Chi siamo", "ChiSiamo", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - W3School.it</p>
+        </footer>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

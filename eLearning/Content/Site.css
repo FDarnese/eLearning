@@ -1,0 +1,33 @@
+﻿/*
+Theme Name: w3school.it
+Theme URI: http://www.w3school.it
+Description: Custom responsive ASP.NET theme built using all the Twitter Bootstrap elements and features.
+Version: 1.0.1
+
+Author: Frank D'Arnese
+Author URI: http://www.frankdarnese.com
+Copyright (C) 2016 w3school.it
+
+License: GNU General Public License 3 (GPLv3) or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+	
+CSS Rules: Ordered by pages for better organization.
+*/
+body                    { padding-bottom: 20px; }
+/* Set padding to keep content from hitting the edges */
+.body-content           { padding-left: 15px; padding-right: 15px; }
+/* Override the default bootstrap behavior where horizontal description lists will truncate terms that are too long to fit in the left column */
+.dl-horizontal dt       { white-space: normal; }
+/* Set width on the form input elements since they're 100% wide by default */
+input, select, textarea { max-width: 280px; }
+
+/* TOP LOGO AREA */
+.logo-area      { background: #fff; padding: 0 50px 0; margin-bottom: -10px; }
+.logo           { padding:0; margin:0; }
+.logo-area h1   { font-size: 14px; text-transform: uppercase; float: right; letter-spacing: 4px; line-height: 45px;}
+
+/* NAVIGATION MENU BAR */
+.navbar { background: #5fcf80; border-radius: 0; box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;  }
+.navbar-nav > li > a { color: #fff; font-size: 17px; text-transform: uppercase; line-height: 1.5; letter-spacing: 1px; }
+
+.home h2 { text-transform: uppercase; font-size: 18px;}

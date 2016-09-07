@@ -1,0 +1,24 @@
+﻿@model ChapterVM
+@{
+    ViewBag.Title = "Chapter";
+}
+
+@section navbar{
+    @Html.Partial("~/Views/Shared/Partials/_NavFeaturedArticles.cshtml")
+}
+
+<h2>Chapter @Model.Display</h2>
+
+@if (!string.IsNullOrWhiteSpace(Model.PreviousUid))
+{
+    <a href="@Url.Action("Chapter", "Articles", new { Id = Model.ArticleUid, ChapterId = Model.PreviousUid })">Previous chapter</a>
+}
+
+@if (!string.IsNullOrWhiteSpace(Model.NextUid))
+{
+    <a href="@Url.Action("Chapter", "Articles", new { Id = Model.ArticleUid, ChapterId = Model.NextUid})">Next chapter</a>
+}
+
+<div class="body-content">
+    @Html.Raw(Model.ContentHtml)
+</div>

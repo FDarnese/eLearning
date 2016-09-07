@@ -1,0 +1,14 @@
+﻿@model ArticleVM
+@{
+    ViewBag.Title = "Article";
+}
+
+@section navbar{
+    @Html.Partial("~/Views/Shared/Partials/_NavFeaturedArticles.cshtml")
+}
+
+<h2>Article @Model.Display</h2>
+<p>@Model.Description</p>
+
+@Html.Action("_Contents", "Articles", new { Id = Model.Uid })
+

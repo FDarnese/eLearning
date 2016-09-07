@@ -1,0 +1,19 @@
+﻿@model DictionaryVM
+
+<ul>
+    @foreach (var cat in Model.Categories)
+    {
+        <li>
+            <h3>@cat.Display</h3>            
+        </li>
+
+        foreach(var art in cat.Articles)
+        {
+            <li>
+                <h4>@art.Display</h4>
+                <p>@art.Description</p>
+                <a href="@Url.Action("Article", "Articles", new { Id = art.Uid })">Start reading</a>
+            </li>
+        }
+    }
+</ul>
