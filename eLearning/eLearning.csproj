@@ -183,6 +183,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\scripts.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
@@ -199,8 +200,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Impara.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\impara.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Articles\Index.cshtml" />
     <Content Include="Views\Articles\Partials\Dictionary.cshtml" />
@@ -212,6 +212,7 @@
     <Content Include="Views\Shared\Partials\_NavFeaturedArticles.cshtml" />
     <Content Include="Views\Shared\Partials\_NavDefault.cshtml" />
     <Content Include="Views\Home\chisiamo.cshtml" />
+    <Content Include="Views\Home\certificati.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

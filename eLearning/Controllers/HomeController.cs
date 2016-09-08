@@ -20,7 +20,7 @@ namespace eLearning.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Certificati()
         {
             ViewBag.Message = "Your cerfificates page.";
 
@@ -28,7 +28,7 @@ namespace eLearning.Controllers
         }
         public ActionResult ChiSiamo()
         {
-            ViewBag.Message = "Your cerfificates page.";
+            ViewBag.Message = "About page.";
 
             return View();
         }
