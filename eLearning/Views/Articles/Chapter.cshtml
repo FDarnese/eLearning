@@ -9,6 +9,8 @@
 
 <h2>Chapter @Model.Display</h2>
 
+@Html.Action("_Contents", "Articles", new { Id = Model.ArticleUid })
+
 @if (!string.IsNullOrWhiteSpace(Model.PreviousUid))
 {
     <a href="@Url.Action("Chapter", "Articles", new { Id = Model.ArticleUid, ChapterId = Model.PreviousUid })">Previous chapter</a>

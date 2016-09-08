@@ -1,3 +1,17 @@
+//SIDEBAR FIXED ON SCROLL
+$('#sidebar').affix({
+    offset: {
+        top: 245
+    }
+});
+var $body = $(document.body);
+var navHeight = $('.navbar').outerHeight(true) + 10;
+
+$body.scrollspy({
+    target: '#leftCol',
+    offset: navHeight
+});
+// EXTENSIBLE SEARCH BAR
 $(function () {
     // Remove Search if user Resets Form or hits Escape!
     $('body, .navbar-collapse form[role="search"] button[type="reset"]').on('click keyup', function (event) {

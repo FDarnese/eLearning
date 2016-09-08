@@ -13,13 +13,17 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
 CSS Rules: Ordered by pages for better organization.
 */
+
 body                    { padding-bottom: 20px; overflow-x: hidden; }
 /* Set padding to keep content from hitting the edges */
-.body-content           { padding-left: 15px; padding-right: 15px; }
+body-content           { padding-left: 15px; padding-right: 15px; }
 /* Override the default bootstrap behavior where horizontal description lists will truncate terms that are too long to fit in the left column */
 .dl-horizontal dt       { white-space: normal; }
 /* Set width on the form input elements since they're 100% wide by default */
 input, select, textarea { max-width: 280px; }
+
+/**********  HOME PAGE **********/
+.home h2 { text-transform: uppercase; font-size: 18px; }
 
 /* TOP LOGO AREA */
 .logo-area      { background: #fff; padding: 0 50px 0; margin-bottom: -10px; }
@@ -32,105 +36,68 @@ input, select, textarea { max-width: 280px; }
 .navbar-default .navbar-nav > li > a { color: #fff; font-size: 17px; text-transform: uppercase; line-height: 1.5; letter-spacing: 1px; }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus { background: #ffffff; }
 
-.container-fluid.navbar-area {
-    padding: 0;
-    margin: 0;
+.container-fluid.navbar-area { padding: 0; margin: 0; }
+
+/* NAVIGATION COLLAPSE + EXTENSIBLE SEARCH BAR*/
+.navbar-collapse { position: relative; padding-top: 30px !important; max-height: 270px; }
+
+.navbar-collapse form[role="search"] { position: absolute; top: 0px; right: 0px; width: 100%; padding: 0px; margin: 0px; z-index: 0; }
+.navbar-collapse form[role="search"] button,
+.navbar-collapse form[role="search"] input { padding: 8px 12px; border-radius: 0px; border-width: 0px; color: rgb(119, 119, 119); background-color: transparent!important; border-color: rgb(231, 231, 231); box-shadow: none; outline: none; }
+.navbar-collapse form[role="search"] input { padding: 16px 12px; font-size: 14pt; font-style: italic; color: rgb(160, 160, 160); box-shadow: none; }
+.navbar-collapse form[role="search"] button[type="reset"] { display: none; }
+
+@media (min-width: 768px) {
+	.navbar-collapse { padding-top: 0px !important; padding-right: 38px !important; }
+	.navbar-collapse form[role="search"] { width: 38px; background: #fff; }
+	.navbar-collapse form[role="search"] button,
+	.navbar-collapse form[role="search"] input { padding: 15px 12px; }
+	.navbar-collapse form[role="search"] input { font-size: 18pt; opacity: 0; display: none; height: 50px; }
+	.navbar-collapse form[role="search"].active { width: 100%; }
+	.navbar-collapse form[role="search"].active button,
+	.navbar-collapse form[role="search"].active input { display: table-cell; opacity: 1; }
+    .navbar-collapse form[role="search"].active input { width: 100%; padding-top: 30px; font-size: 18px; text-transform: uppercase; font-style: normal; }
 }
 
-.home h2 { text-transform: uppercase; font-size: 18px;}
+.navbar-form .input-group { display: inline-table; vertical-align: middle; width: 100%; }
+
+.navbar-form .input-group .input-group-addon, .navbar-form .input-group .input-group-btn, .navbar-form .input-group .form-control { width: 1%; }
+input.form-control { background: #fff!important; }
+
+span.input-group-btn { background: transparent!important }
+
+.btn btn-default { color: #fff; font-size: 22px; padding: 15px 20px 0; }
+button.btn.btn-default { background: transparent!important; padding: 0 0 -20px 20px; }
+
+@media (min-width: 768px) {
+    .navbar-right { float: right !important; margin-right: 15px; }
+}
 
 span.glyphicon.glyphicon-search { color: #fff; font-size: 22px; padding-top: 8px; }
 span.glyphicon.glyphicon-search:hover { opacity: 0.9; }
 
 
-.btn btn-default { color: #fff; font-size: 22px; padding: 15px 20px 0; }
+/* SIDEBAR FIXED ON SCROLLING */
 
+body { }
 
-.navbar-collapse {
-		position: relative;
-		padding-top: 30px !important;
-		max-height: 270px;
-	}
-	.navbar-collapse form[role="search"] {
-		position: absolute;
-		top: 0px;
-		right: 0px;
-		width: 100%;
-		padding: 0px;
-		margin: 0px;
-		z-index: 0;
-	}
-	.navbar-collapse form[role="search"] button,
-	.navbar-collapse form[role="search"] input {
-		padding: 8px 12px;
-		border-radius: 0px;
-		border-width: 0px;
-		color: rgb(119, 119, 119);
-		background-color: transparent!important;
-		border-color: rgb(231, 231, 231);
-		box-shadow: none;
-		outline: none;
-	}
-	.navbar-collapse form[role="search"] input {
-		padding: 16px 12px;
-		font-size: 14pt;
-		font-style: italic;
-		color: rgb(160, 160, 160);
-		box-shadow: none;
-	}
-	.navbar-collapse form[role="search"] button[type="reset"] {
-		display: none;
-	}
+#masthead       { min-height:270px; background-color:#eee; color:#4f4f57; }
+#masthead h1    { font-size: 55px; line-height: 1; }
+#masthead .well { margin-top:13%; background-color:whitesmoke; }
+.icon-bar       { background-color:#fff; }
 
-	@media (min-width: 768px) {
-		.navbar-collapse {
-			padding-top: 0px !important;
-			padding-right: 38px !important;
-		}
-		.navbar-collapse form[role="search"] {
-			width: 38px;
-            background: #fff;
-		}
-		.navbar-collapse form[role="search"] button,
-		.navbar-collapse form[role="search"] input {
-			padding: 15px 12px;
-		}
-		.navbar-collapse form[role="search"] input {
-			font-size: 18pt;
-			opacity: 0;
-			display: none;            
-            height: 50px;
-		}
-		.navbar-collapse form[role="search"].active {
-			width: 100%;
-		}
-		.navbar-collapse form[role="search"].active button,
-		.navbar-collapse form[role="search"].active input {
-			display: table-cell;
-			opacity: 1;
-		}
-    	.navbar-collapse form[role="search"].active input { width: 100%; padding-top: 30px; font-size: 18px; text-transform: uppercase; font-style: normal; }
-	}
-
-.navbar-form .input-group {
-    display: inline-table;
-    vertical-align: middle;
-    width: 100%;
+@media screen and (min-width: 768px) {
+	#masthead h1 { font-size: 100px; }
 }
 
-.navbar-form .input-group .input-group-addon, .navbar-form .input-group .input-group-btn, .navbar-form .input-group .form-control { width: 1%; }
-input.form-control { background: #fff!important; }
+.navbar-bright { background-color:#111155; color:#fff; }
+.navbar-bright a, #masthead a, #masthead .lead { color:#4f4f57; }
+.navbar-bright li > a:hover { background-color:#000033; }
+.affix-top,.affix{ position: static; }
 
-button.btn.btn-default {
-    background: transparent!important;
-    padding: 0 0 -20px 20px;
+@media (min-width: 979px) {
+  #sidebar.affix-top { position: static; margin-top:30px; width:228px; }
+  #sidebar.affix { position: fixed; top:70px; width:228px; }
 }
-
-span.input-group-btn { background: transparent!important }
-
-@media (min-width: 768px) {
-    .navbar-right {
-        float: right !important;
-        margin-right: 15px;
-    }
-}
+#sidebar li.active { border:0 #eee solid; border-right-width:4px; }
+#mainCol h2 { padding-top: 55px; margin-top: -55px; }

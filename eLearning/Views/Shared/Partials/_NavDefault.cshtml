@@ -1,19 +1,128 @@
-﻿<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
+﻿<!--
+ <div class="container-fluid logo-area">
+     <div class="row">
+         <div class="col-sm-4">
+             <a href="@Url.Action("Index","Home")"><img src="~/Content/images/logo.png" class="logo" /></a>
+             <!-- @Html.ActionLink("W3School.it", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+         </div>
+         <div class="col-sm-8">
+             <h1>La più grande piattaforma gratuita Italiana per Web Developers</h1>
+         </div>
+     </div>
+ </div>
+     -->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid navbar-area">
+        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
         </div>
-        <div class="navbar-collapse collapse">
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                <li>@Html.ActionLink("About", "About", "Home")</li>
-                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                <li class="active">@Html.ActionLink("HTML", "HTML", "Home")</li>
+                <li>@Html.ActionLink("CSS", "Certificati", "Home")</li>
+                <li>@Html.ActionLink("JavaScript", "ChiSiamo", "Home")</li>
+                <li>@Html.ActionLink("JQuery", "Impara", "Home")</li>
+                <li>@Html.ActionLink("Bootstrap", "Certificati", "Home")</li>
+                <li>@Html.ActionLink("ASP.NET", "ChiSiamo", "Home")</li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Impara HTML5", "Certificati", "Home")</li>
+                        <li class="divider"></li>
+                        <li><a href="#">Impara AngularJS</a></li>
+                        <li><a href="#">Impara AJAX</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Impara JSON</a></li>
+                        <li><a href="#">Impara XML</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Impara SQL</a></li>
+                        <li><a href="#">Impara PHP</a></li>
+                    </ul>
+                </li>
             </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>@Html.ActionLink("Forum", "ChiSiamo", "Home")</li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Certificati <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("HTML", "Certificati", "Home")</li>
+                        <li>@Html.ActionLink("HTML5", "Certificati", "Home")</li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">Bootstrap</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">AngularJS</a></li>
+                        <li><a href="#">JQuery</a></li>
+                        <li><a href="#">AJAX</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">JSON</a></li>
+                        <li><a href="#">XML</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">SQL</a></li>
+                        <li><a href="#">PHP</a></li>
+                        <li><a href="#">ASP.NET</a></li>
+
+                    </ul>
+                </li>
+                <!-- <li><span class="glyphicon glyphicon-search" aria-hidden="true"></span></li> -->
+            </ul>
+
+            <form class="navbar-form" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Cerca nel sito">
+                    <span class="input-group-btn">
+                        <button type="reset" class="btn btn-default">
+                            <span class="glyphicon glyphicon-remove">
+                                <span class="sr-only">Close</span>
+                            </span>
+                        </button>
+                        <button type="submit" class="btn btn-default">
+                            <span class="glyphicon glyphicon-search">
+                                <span class="sr-only">Search</span>
+                            </span>
+                        </button>
+                    </span>
+                </div>
+            </form>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<!--
+<div class="container">
+    <div class="row">
+        <div class="alert alert-success">
+            <strong>Your Result!</strong> <span id="showSearchTerm"></span>
         </div>
     </div>
 </div>
+-->
+<!--
+<div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+        <li>@Html.ActionLink("Impara", "Impara", "Home")</li>
+        <li>@Html.ActionLink("HTML", "Impara", "Home")</li>
+        <li>@Html.ActionLink("CSS", "Certificati", "Home")</li>
+        <li>@Html.ActionLink("JavaScript", "ChiSiamo", "Home")</li>
+        <li>@Html.ActionLink("JQuery", "Impara", "Home")</li>
+        <li>@Html.ActionLink("Bootstrap", "Certificati", "Home")</li>
+        <li>@Html.ActionLink("ASP.NET", "ChiSiamo", "Home")</li>
+    </ul>
+
+
+
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("Forum", "ChiSiamo", "Home")</li>
+        <li>@Html.ActionLink("Certificati", "Certificati", "Home")</li>
+        <li><span class="glyphicon glyphicon-search" aria-hidden="true"></span></li>
+    </ul>
+</div>
+-->

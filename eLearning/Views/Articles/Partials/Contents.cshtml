@@ -6,8 +6,7 @@
     @foreach (var chapter in Model.Contents)
     {
         <li>
-            <h3>@chapter.Display</h3>
-            <a href="@Url.Action("Chapter", "Articles", new { Id = Model.ArticleUid, ChapterId = chapter.Uid })">Start reading</a>
+            <a href="@Url.Action("Chapter", "Articles", new { Id = Model.ArticleUid, ChapterId = chapter.Uid })">@chapter.Display</a>
         </li>
     }
 </ul>

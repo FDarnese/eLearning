@@ -13,9 +13,9 @@ namespace eLearning.Controllers
             return View();
         }
 
-        public ActionResult Impara()
+        public ActionResult HTML()
         {
-            ViewBag.Message = "Your programming languages list page.";
+            ViewBag.Message = "Impara HTML, il linguaggio per costruire pagine web.";
 
             return View();
         }

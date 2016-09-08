@@ -1,5 +1,29 @@
 ﻿[
   {
+    "uid": "html",
+    "display": "HTML5",
+    "articles": [
+      {
+        "uid": "introduction",
+        "display": "Introduction to HTML",
+        "description": "At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.",
+        "featured": true,
+        "chapters": [
+          {
+            "uid": "content",
+            "display": "Table of contents",
+            "content": "html/content.html"
+          },
+          {
+            "uid": "section-2",
+            "display": "Section 2",
+            "content": "html/section2.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "uid": "css",
     "display": "CSS",
     "articles": [
