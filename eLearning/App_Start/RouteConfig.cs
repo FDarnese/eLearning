@@ -10,14 +10,14 @@ namespace eLearning
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "LibArticles",
-                url: "lib",
-                defaults: new { controller = "Articles", action = "Index" }
+                name: "Home",
+                url: "",
+                defaults: new { controller = "Home", action = "Index" }
             );
-            
+
             routes.MapRoute(
-                name: "LibChapter",
-                url: "lib/{id}/{chapterId}",
+                name: "Articles",
+                url: "{id}/{chapterId}",
                 defaults: new { controller = "Articles", action = "Article", chapterId = UrlParameter.Optional }
             );
 
