@@ -156,7 +156,9 @@
     <Content Include="Content\articles\css\chapter2.html" />
     <Content Include="Content\articles\css\chapter1.html" />
     <Content Include="Content\articles\css\tiramisu.jpg" />
-    <Content Include="Content\articles\html\content.html" />
+    <Content Include="Content\articles\html\introduzione.html" />
+    <Content Include="Content\articles\html\home.html" />
+    <Content Include="Content\articles\html\html-editors.html" />
     <Content Include="Content\articles\html\section2.html" />
     <Content Include="Content\articles\javascript\chapter1.html" />
     <Content Include="Content\articles\javascript\chapter2.html" />
@@ -232,6 +234,7 @@
     <Content Include="Views\Home\chisiamo.cshtml" />
     <Content Include="Views\Home\certificati.cshtml" />
     <Content Include="Views\Shared\Partials\_NavTiles.cshtml" />
+    <Content Include="Views\Shared\Partials\_NavDefault - Copy.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

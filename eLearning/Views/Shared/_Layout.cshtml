@@ -18,7 +18,6 @@
     {
         @RenderSection("navbar")
     }
-
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-2">
@@ -34,7 +33,6 @@
             <div class="col-md-8">
                 <div class="body-content">
                     @RenderBody()
-
                 </div>
             </div>
             <div class="col-md-2">
@@ -44,15 +42,17 @@
             </div>
         </div><!-- End of Row-->
     </div><!-- End of Container-->
-    
-    <hr />
-    
-    <footer>
-        <p>&copy; @DateTime.Now.Year - W3School.it</p>
-    </footer>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    <hr />
+    <div class="container-fluid">
+        <div class="row">
+            <footer>
+                <p>&copy; @DateTime.Now.Year - W3School.it</p>
+            </footer>
+         </div>
+     </div>
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")
+            @RenderSection("scripts", required: false)
 </body>
 </html>

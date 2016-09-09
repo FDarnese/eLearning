@@ -2,37 +2,43 @@
 @{
     ViewBag.Title = "Chapter";
 }
-
 @section navbar {
-    @Html.Action("_NavBar", "Home")    
+    @Html.Action("_NavBar", "Home")
 }
-
-@section sidebar {
-    @Html.Action("_Contents", "Articles", new { Id = Model.ArticleUid })
-}
-
-<h2>Chapter @Model.Display</h2>
-
-    @if (!string.IsNullOrWhiteSpace(Model.PreviousUid))
-    {
-        <a href="@Url.Action("Article", "Articles", new { Id = Model.ArticleUid, ChapterId = Model.PreviousUid })">Previous chapter</a>
+    @section sidebar {
+        @Html.Action("_Contents", "Articles", new { Id = Model.ArticleUid })
     }
-
-    @if (!string.IsNullOrWhiteSpace(Model.NextUid))
-    {
-        <a href="@Url.Action("Article", "Articles", new { Id = Model.ArticleUid, ChapterId = Model.NextUid})">Next chapter</a>
-    }
-
+<h2>@Model.Display</h2>
+<div class="row">
+    <div class="col-md-6 text-left">
+        @if (!string.IsNullOrWhiteSpace(Model.PreviousUid))
+        {
+            <a class="previous" href="@Url.Action("Article", "Articles", new { Id = Model.ArticleUid, ChapterId = Model.PreviousUid })">Lezione precedente</a>
+        }
+    </div>
+    <div class="col-md-6 text-right">
+        @if (!string.IsNullOrWhiteSpace(Model.NextUid))
+        {
+            <a class="next" href="@Url.Action("Article", "Articles", new { Id = Model.ArticleUid, ChapterId = Model.NextUid})">Prossima Lezione</a>
+        }
+    </div>
+</div>
+<hr />
 <div class="body-content">
     @Html.Raw(Model.ContentHtml)
 </div>
 
-    @if (!string.IsNullOrWhiteSpace(Model.PreviousUid))
-    {
-        <a href="@Url.Action("Article", "Articles", new { Id = Model.ArticleUid, ChapterId = Model.PreviousUid })">Previous chapter</a>
-    }
-
-    @if (!string.IsNullOrWhiteSpace(Model.NextUid))
-    {
-        <a href="@Url.Action("Article", "Articles", new { Id = Model.ArticleUid, ChapterId = Model.NextUid})">Next chapter</a>
-    }
+<div class="row">
+    <div class="col-md-6 text-left">
+        @if (!string.IsNullOrWhiteSpace(Model.PreviousUid))
+        {
+            <a class="previous" href="@Url.Action("Article", "Articles", new { Id = Model.ArticleUid, ChapterId = Model.PreviousUid })">Lezione precedente</a>
+        }
+    </div>
+    <div class="col-md-6 text-right">
+        @if (!string.IsNullOrWhiteSpace(Model.NextUid))
+        {
+            <a class="next" href="@Url.Action("Article", "Articles", new { Id = Model.ArticleUid, ChapterId = Model.NextUid})">Prossima Lezione</a>
+        }
+    </div>
+</div>

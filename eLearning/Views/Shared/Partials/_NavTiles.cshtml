@@ -5,11 +5,13 @@
     {
         <div class="col-md-4">
             <h3>@tile.Display</h3>
+            <br>
             <img src="@Url.Content("~/Content/navtiles/"+tile.Uid+".png")" />
             <br />
-            <a href="@Url.Action("Article", "Articles", new { Id = tile.ArticleUid })">@tile.ArticleDisplay</a>
+            <ul class="cursori"
+            <a class="btn btn-default" href="@Url.Action("Article", "Articles", new { Id = tile.ArticleUid })">@tile.ArticleDisplay</a>
             <br />
-            <a href="@Url.Action("Certificate", "Certificates", new { Id = tile.CertUid})">@tile.CertName</a>
+            <a class="btn btn-default" href="@Url.Action("Certificate", "Certificates", new { Id = tile.CertUid})">@tile.CertName</a>
         </div>
     }
 </div>

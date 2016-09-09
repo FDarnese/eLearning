@@ -3,21 +3,21 @@
     "uid": "html",
     "display": "HTML",
     "article-uid": "html",
-    "cert-name": "HTML Certification",
+    "cert-name": "Certificati in HTML",
     "cert-uid": "not-ready-yet"
   },
   {
     "uid": "css",
     "display": "CSS",
     "article-uid": "css",
-    "cert-name": "CSS Certification",
+    "cert-name": "Certificati in CSS",
     "cert-uid": "not-ready-yet"
   },
   {
     "uid": "javascript",
     "display": "JavaScript",
     "article-uid": "javascript",
-    "cert-name": "JavaScript Certification",
+    "cert-name": "Certificati in JavaScript",
     "cert-uid": "not-ready-yet"
   }
 ]
