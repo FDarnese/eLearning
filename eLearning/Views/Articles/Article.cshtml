@@ -3,27 +3,26 @@
     ViewBag.Title = "Chapter";
 }
 
+@section navbar {
+    @Html.Action("_NavBar", "Home")    
+}
+
+@section sidebar {
+    @Html.Action("_Contents", "Articles", new { Id = Model.ArticleUid })
+}
+
 <h2>Chapter @Model.Display</h2>
 
-<div class="row">
+@if (!string.IsNullOrWhiteSpace(Model.PreviousUid))
+{
+    <a href="@Url.Action("Article", "Articles", new { Id = Model.ArticleUid, ChapterId = Model.PreviousUid })">Previous chapter</a>
+}
 
-    <div class="col-md-4">
-        @Html.Action("_Contents", "Articles", new { Id = Model.ArticleUid })
-    </div>
+@if (!string.IsNullOrWhiteSpace(Model.NextUid))
+{
+    <a href="@Url.Action("Article", "Articles", new { Id = Model.ArticleUid, ChapterId = Model.NextUid})">Next chapter</a>
+}
 
-    <div class="col-md-8">
-        @if (!string.IsNullOrWhiteSpace(Model.PreviousUid))
-        {
-            <a href="@Url.Action("Article", "Articles", new { Id = Model.ArticleUid, ChapterId = Model.PreviousUid })">Previous chapter</a>
-        }
-
-        @if (!string.IsNullOrWhiteSpace(Model.NextUid))
-        {
-            <a href="@Url.Action("Article", "Articles", new { Id = Model.ArticleUid, ChapterId = Model.NextUid})">Next chapter</a>
-        }
-
-        <div class="body-content">
-            @Html.Raw(Model.ContentHtml)
-        </div>
-    </div>
+<div class="body-content">
+    @Html.Raw(Model.ContentHtml)
 </div>

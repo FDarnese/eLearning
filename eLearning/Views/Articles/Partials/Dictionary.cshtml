@@ -10,9 +10,7 @@
         foreach(var art in cat.Articles)
         {
             <li>
-                <h4>@art.Display</h4>
-                <p>@art.Description</p>
-                <a href="@Url.Action("Article", "Articles", new { Id = art.Uid })">Start reading</a>
+                <a href="@Url.Action("Article", "Articles", new { Id = art.Uid })">@art.Display</a>
             </li>
         }
     }

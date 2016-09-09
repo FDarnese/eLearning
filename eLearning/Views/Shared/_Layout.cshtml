@@ -8,26 +8,44 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-        @if (!IsSectionDefined("navbar"))
-        {
-            <!-- JSON configured navbar will be diaplayed here by default -->
-            @Html.Action("_NavBar", "Home")
-        }
-        else
-        {
-            @RenderSection("navbar")
-        }
+    @if (!IsSectionDefined("navbar"))
+    {
+        @Html.Partial("~/Views/Shared/Partials/_NavDefault.cshtml", "Home")
+    }
+    else
+    {
+        @RenderSection("navbar")
+    }
 
-        <div class="container-FLUID body-content">
-            @RenderBody()
-            <hr />
-            <footer>
-                <p>&copy; @DateTime.Now.Year - W3School.it</p>
-            </footer>
+
+    <div class="row">
+        <div class="col-md-4">
+            @if (!IsSectionDefined("sidebar"))
+            {
+                @Html.Action("_Dictionary", "Articles")
+            }
+            else
+            {
+                @RenderSection("sidebar")
+            }
         </div>
 
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @RenderSection("scripts", required: false)
+        <div class="col-md-8">
+            <div class="container-FLUID body-content">
+                @RenderBody()
+
+            </div>
+        </div>
+
+    </div>
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year - W3School.it</p>
+    </footer>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
 </body>
 </html>

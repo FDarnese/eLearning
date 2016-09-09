@@ -17,22 +17,5 @@
     "article-uid": "learn-js",
 
     "items": [ ]
-  },
-  {
-    "display": "Other...",
-    "items": [
-      {
-        "display": "dummy1",
-        "article-uid": "dummy1"
-      },
-      {
-        "display": "dummy2",
-        "article-uid": "dummy2"
-      },
-      {
-        "display": "dummy3",
-        "article-uid": "dummy3"
-      }
-    ]
   }
 ]
