@@ -13,16 +13,26 @@
 
 <h2>Chapter @Model.Display</h2>
 
-@if (!string.IsNullOrWhiteSpace(Model.PreviousUid))
-{
-    <a href="@Url.Action("Article", "Articles", new { Id = Model.ArticleUid, ChapterId = Model.PreviousUid })">Previous chapter</a>
-}
+    @if (!string.IsNullOrWhiteSpace(Model.PreviousUid))
+    {
+        <a href="@Url.Action("Article", "Articles", new { Id = Model.ArticleUid, ChapterId = Model.PreviousUid })">Previous chapter</a>
+    }
 
-@if (!string.IsNullOrWhiteSpace(Model.NextUid))
-{
-    <a href="@Url.Action("Article", "Articles", new { Id = Model.ArticleUid, ChapterId = Model.NextUid})">Next chapter</a>
-}
+    @if (!string.IsNullOrWhiteSpace(Model.NextUid))
+    {
+        <a href="@Url.Action("Article", "Articles", new { Id = Model.ArticleUid, ChapterId = Model.NextUid})">Next chapter</a>
+    }
 
 <div class="body-content">
     @Html.Raw(Model.ContentHtml)
 </div>
+
+    @if (!string.IsNullOrWhiteSpace(Model.PreviousUid))
+    {
+        <a href="@Url.Action("Article", "Articles", new { Id = Model.ArticleUid, ChapterId = Model.PreviousUid })">Previous chapter</a>
+    }
+
+    @if (!string.IsNullOrWhiteSpace(Model.NextUid))
+    {
+        <a href="@Url.Action("Article", "Articles", new { Id = Model.ArticleUid, ChapterId = Model.NextUid})">Next chapter</a>
+    }

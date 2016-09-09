@@ -2,17 +2,16 @@
     ViewBag.Title = "Home Page";
 }
 
-<!-- Navigation tiles will be rendered here -->
-@Html.Action("_NavTiles", "Home")
-
-<div class="jumbotron">
+<div class="row">
     <h1>Impara a costruire siti web!</h1>
     <p class="lead">
         Con W3School.it e' la piu grande piattaforma gratuita italiana dove puoi imparare a costruire un sito web. Offiramo corsi e turorial gratuiti in diverse tecnologie web tra cui HTML, CSS, JavaScript, JQuery, ASP.NET e molti altro. <br />
         Seleziona e scegli il corso dal menu laterale e inizia a costruire la tua carriera da subito!
     </p>
-    <p><a href="@Url.Action("Index", "Articles")" class="btn btn-primary btn-lg">Scopri di piu' &raquo;</a></p>
 </div>
+
+<!-- Navigation tiles will be rendered here -->
+@Html.Action("_NavTiles", "Home")
 
 <div class="row home">
     <div class="col-md-4">

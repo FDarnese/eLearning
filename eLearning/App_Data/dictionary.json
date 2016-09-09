@@ -4,7 +4,7 @@
     "display": "HTML5 and CSS",
     "articles": [
       {
-        "uid": "learn-html",
+        "uid": "html",
         "display": "Introduction to HTML",
         "description": "At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.",
         "featured": true,
@@ -28,7 +28,7 @@
         ]
       },
       {
-        "uid": "learn-css",
+        "uid": "css",
         "display": "CSS advanced concepts",
         "description": "You will learn how to ....",
         "featured": true,
@@ -54,11 +54,11 @@
     ]
   },
   {
-    "uid": "js",
+    "uid": "javascript",
     "display": "JavaScript",
     "articles": [
       {
-        "uid": "learn-js",
+        "uid": "javascript",
         "display": "Basic JavaScript concepts",
         "description": "You will learn how to ....",
         "featured": true,

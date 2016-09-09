@@ -13,8 +13,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
 CSS Rules: Ordered by pages for better organization.
 */
-
-body                    { padding-bottom: 20px; overflow-x: hidden; padding-top:50px; }
+* { font-family: Titillium Web; }
+body                    { font-size: 16px; padding-bottom: 20px; overflow-x: hidden; padding-top:35px; }
 /* Set padding to keep content from hitting the edges */
 body-content           { padding-left: 15px; padding-right: 15px; }
 /* Override the default bootstrap behavior where horizontal description lists will truncate terms that are too long to fit in the left column */
@@ -27,18 +27,48 @@ input, select, textarea { max-width: 280px; }
 
 /* TOP LOGO AREA */
 .logo-area      { background: #fff; padding: 0 50px 0; margin-bottom: -10px; }
-.logo           { padding:0; margin:0; }
+img.logo           { margin-bottom: 15px; }
 .logo-area h1   { font-size: 14px; text-transform: uppercase; float: right; letter-spacing: 4px; line-height: 45px;}
 
 /* NAVIGATION MENU BAR */
-.navbar { background: #5fcf80; border-radius: 0; box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;  }
+.navbar { background: #5fcf80;  padding: 0px 0; border-radius: 0; border: none; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.40) !important; z-index: 500 !important; overflow: hidden !important; }
 .navbar-nav > li > a,
-.navbar-default .navbar-nav > li > a { color: #fff; font-size: 17px; text-transform: uppercase; line-height: 1.5; letter-spacing: 1px; }
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus { background: #ffffff; }
+.navbar-default .navbar-nav > li > a { color: #fff!important; font-size: 20px; text-transform: uppercase; line-height: 1.5; letter-spacing: 1px; }
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus { background: #ffffff!important; color: #808080; }
 
-.container-fluid.navbar-area { padding: 0; margin: 0; }
+.navbar-inverse .navbar-nav > li > a:hover { background: #ffffff!important; color: #4caf50!important; transition: ease-in-out .3s !important;}
 
-/* NAVIGATION COLLAPSE + EXTENSIBLE SEARCH BAR*/
+
+.subtitle { float: right; padding-right: 25px; font-size: 17px; margin: 0!important; }
+#togglenavbaricon { padding-top: 0px !important; padding-left: 5px !important; font-size: 21px !important; }
+#magnifiericon { float: right !important; padding-top: 0px !important; padding-right: 10px !important; font-size: 21px !important; }
+#globeicon { float: right !important; padding-top: 0px !important; padding-right: 0px !important; font-size: 21px !important; }
+#examples { float: right !important; padding-top: 0px !important; padding-right: 0px !important; font-size: 20px !important; }
+#references { float: right !important; padding-top: 0px !important; padding-right: 0px !important; font-size: 20px !important; }
+#tutorials { float: right !important; padding-top: 0px !important; padding-right: 0px !important; font-size: 20px !important; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* NAVIGATION COLLAPSE + EXTENSIBLE SEARCH BAR
 .navbar-collapse { position: relative; padding-top: 30px !important; max-height: 270px; }
 
 .navbar-collapse form[role="search"] { position: absolute; top: 0px; right: 0px; width: 100%; padding: 0px; margin: 0px; z-index: 0; }
@@ -77,18 +107,10 @@ span.glyphicon.glyphicon-search { color: #fff; font-size: 22px; padding-top: 8px
 span.glyphicon.glyphicon-search:hover { opacity: 0.9; }
 
 
-/* SIDEBAR FIXED ON SCROLLING */
-
+/* SIDEBAR FIXED ON SCROLLING 
 body { }
 
-#masthead       { min-height:270px; background-color:#eee; color:#4f4f57; }
-#masthead h1    { font-size: 55px; line-height: 1; }
-#masthead .well { margin-top:13%; background-color:whitesmoke; }
 .icon-bar       { background-color:#fff; }
-
-@media screen and (min-width: 768px) {
-	#masthead h1 { font-size: 100px; }
-}
 
 .navbar-bright { background-color:#111155; color:#fff; }
 .navbar-bright a, #masthead a, #masthead .lead { color:#4f4f57; }
@@ -101,3 +123,5 @@ body { }
 }
 #sidebar li.active { border:0 #eee solid; border-right-width:4px; }
 #mainCol h2 { padding-top: 55px; margin-top: -55px; }
+
+*/

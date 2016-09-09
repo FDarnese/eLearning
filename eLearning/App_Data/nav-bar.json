@@ -1,20 +1,37 @@
 ﻿[
   {
     "display": "HTML",
-    "article-uid": "learn-html",
+    "article-uid": "html",
 
     "items": [ ]
   },
   {
     "display": "CSS",
-    "article-uid": "learn-css",
+    "article-uid": "css",
 
     "items": [ ]
   },
-
   {
     "display": "JavaScript",
-    "article-uid": "learn-js",
+    "article-uid": "javascript",
+
+    "items": [ ]
+  },
+  {
+    "display": "JQuery",
+    "article-uid": "jquery",
+
+    "items": [ ]
+  },
+  {
+    "display": "Bootstrap",
+    "article-uid": "bootstrap",
+
+    "items": [ ]
+  },
+    {
+    "display": "ASP.NET",
+    "article-uid": "asp.net",
 
     "items": [ ]
   }

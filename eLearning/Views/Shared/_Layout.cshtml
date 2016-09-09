@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - W3School.it</title>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,700,400italic,700italic,300italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -17,32 +19,37 @@
         @RenderSection("navbar")
     }
 
-
-    <div class="row">
-        <div class="col-md-4">
-            @if (!IsSectionDefined("sidebar"))
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                @if (!IsSectionDefined("sidebar"))
             {
-                @Html.Action("_Dictionary", "Articles")
-            }
-            else
-            {
-                @RenderSection("sidebar")
-            }
-        </div>
-
-        <div class="col-md-8">
-            <div class="container-FLUID body-content">
-                @RenderBody()
-
+                    @Html.Action("_Dictionary", "Articles")
+                }
+                else
+                {
+                    @RenderSection("sidebar")
+                }
             </div>
-        </div>
+            <div class="col-md-8">
+                <div class="body-content">
+                    @RenderBody()
 
-    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="">
+                    <h1>Ads Section</h1>
+                </div>
+            </div>
+        </div><!-- End of Row-->
+    </div><!-- End of Container-->
+    
     <hr />
+    
     <footer>
         <p>&copy; @DateTime.Now.Year - W3School.it</p>
     </footer>
-
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

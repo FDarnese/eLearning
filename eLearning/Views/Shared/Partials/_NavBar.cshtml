@@ -20,16 +20,24 @@
     </li>
 }
 
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
+<div class="row">
+    <div class="col-md-6">
+        <a href="@Url.Action("Index","Home")"><img class="logo"src="http://i.imgur.com/UbWX9nB.png" height="32px" /></a>
+    </div>
+    <div class="col-md-6">
+        <p class="subtitle">La più grande piattaforma gratuita Italiana per Web Developers</b></p>
+    </div>
+</div>
+
+<div class="navbar navbar-inverse">
+    <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <button type="button" class="navbar-toggle fa fa-list" data-toggle="collapse" data-target=".navbar-collapse">
                 @foreach (var rootItem in Model)
                 {
                     <span class="icon-bar"></span>
                 }
             </button>
-            @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -37,7 +45,17 @@
                 {
                     @navBarItem(rootItem)
                 }
+
             </ul>
-        </div>
+            <ul class="nav navbar-nav navbar-right">
+                <!-- <li id="togglenavbaricon" ><a href=""><i class="fa fa-list"></i></a></li>-->
+                <li id="magnifiericon"><a href=""><i class="fa fa-search"></i></a></li>
+                <li id="globeicon"><a href=""><i class="fa fa-globe"></i></a></li>
+                <li id="examples"><a href="">EXAMPLES</a></li>
+                <li id="references"><a href="">REFERENCES</a></li>
+                <li id="tutorials"><a href="">TUTORIALS</a></li>
+            </ul>
+            
+</div>
     </div>
 </div>
