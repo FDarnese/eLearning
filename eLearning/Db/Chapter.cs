@@ -10,6 +10,8 @@ namespace eLearning.Db
         public string Uid { get; set; }
         [JsonProperty("display")]
         public string Display { get; set; }
+        [JsonProperty("separator")]
+        public string Separator { get; set; }
         [JsonProperty("content")]
         public string Content { get; set; }
 

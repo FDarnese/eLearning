@@ -1,12 +1,30 @@
-﻿@{
-    IEnumerable<ArticleVM> featuredArticles = ViewBag.FeaturedArticles ?? new ArticleVM[] { };
+﻿@model NavBarItemVM[]
+
+@helper navBarItem(NavBarItemVM item)
+{
+    <li>
+        @if (item.Items.Any())
+        {
+            <span>@item.Display</span>
+            <ul>
+                @foreach (var subItem in item.Items)
+                {
+                    @navBarItem(subItem)
+                }
+            </ul>
+        }
+        else
+        {
+            <a href="@Url.Action("Article", "Articles", new { Id = item.ArticleUid})">@item.Display</a>
+        }
+    </li>
 }
 
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                @foreach (var featured in featuredArticles)
+                @foreach (var rootItem in Model)
                 {
                     <span class="icon-bar"></span>
                 }
@@ -15,11 +33,9 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                @foreach (var featured in featuredArticles)
+                @foreach (var rootItem in Model)
                 {
-                    <li>
-                        <a href="@Url.Action("Article", "Articles", new { Id = featured.Uid })">@featured.Display</a>
-                    </li>
+                    @navBarItem(rootItem)
                 }
             </ul>
         </div>

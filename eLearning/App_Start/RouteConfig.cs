@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace eLearning
@@ -18,17 +14,11 @@ namespace eLearning
                 url: "lib",
                 defaults: new { controller = "Articles", action = "Index" }
             );
-
-            routes.MapRoute(
-                name: "LibArticleChapters",
-                url: "lib/{id}",
-                defaults: new { controller = "Articles", action = "Article" }
-            );
-
+            
             routes.MapRoute(
                 name: "LibChapter",
                 url: "lib/{id}/{chapterId}",
-                defaults: new { controller = "Articles", action = "Chapter" }
+                defaults: new { controller = "Articles", action = "Article", chapterId = UrlParameter.Optional }
             );
 
             routes.MapRoute(

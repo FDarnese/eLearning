@@ -122,11 +122,14 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ArticlesController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Db\Article.cs" />
-    <Compile Include="Db\ArticlesRepository.cs" />
+    <Compile Include="Db\DataRepository.cs" />
     <Compile Include="Db\Category.cs" />
     <Compile Include="Db\Chapter.cs" />
+    <Compile Include="Db\NavBarItem.cs" />
+    <Compile Include="Db\NavTile.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -137,9 +140,14 @@
     <Compile Include="Models\Articles\DictionaryArticleItemVM.cs" />
     <Compile Include="Models\Articles\DictionaryCategoryItemVM.cs" />
     <Compile Include="Models\Articles\DictionaryVM.cs" />
+    <Compile Include="Models\Shared\NavBarItemVM.cs" />
+    <Compile Include="Models\Shared\NavFeaturedArticleVM.cs" />
+    <Compile Include="Models\Shared\NavTileVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\nav-bar.json" />
+    <None Include="App_Data\nav-tiles.json" />
     <Content Include="Content\articles\css-advanced\chapter3.html" />
     <Content Include="Content\articles\css-advanced\chapter2.html" />
     <Content Include="Content\articles\css-advanced\chapter1.html" />
@@ -155,6 +163,9 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\logo.png" />
+    <Content Include="Content\navtiles\css.png" />
+    <Content Include="Content\navtiles\html.png" />
+    <Content Include="Content\navtiles\js.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -205,14 +216,14 @@
     <Content Include="Views\Articles\Index.cshtml" />
     <Content Include="Views\Articles\Partials\Dictionary.cshtml" />
     <Content Include="Views\Articles\Partials\Contents.cshtml" />
-    <Content Include="Views\Articles\Chapter.cshtml" />
     <Content Include="Views\Articles\Article.cshtml" />
     <Content Include="Scripts\jquery-3.1.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.0.min.map" />
-    <Content Include="Views\Shared\Partials\_NavFeaturedArticles.cshtml" />
+    <Content Include="Views\Shared\Partials\_NavBar.cshtml" />
     <Content Include="Views\Shared\Partials\_NavDefault.cshtml" />
     <Content Include="Views\Home\chisiamo.cshtml" />
     <Content Include="Views\Home\certificati.cshtml" />
+    <Content Include="Views\Shared\Partials\_NavTiles.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

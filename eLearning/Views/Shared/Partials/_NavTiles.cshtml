@@ -1,0 +1,14 @@
+﻿@model NavTileVM[]
+
+<div class="row">
+    @foreach (var tile in Model)
+    {
+        <div class="col-md-3">
+            <h3>@tile.Display</h3>
+            <img src="@Url.Content("~/Content/navtiles/"+tile.Uid+".png")" />
+
+            <a href="@Url.Action("Article", "Articles", new { Id = tile.ArticleUid })">@tile.ArticleDisplay</a>
+            <a href="@Url.Action("Certificate", "Certificates", new { Id = tile.CertUid})">@tile.CertName</a>
+        </div>
+    }
+</div>

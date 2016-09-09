@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Web.Mvc;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+using eLearning.Db;
+using eLearning.Models.Shared;
+using System;
 
 namespace eLearning.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         public ActionResult Index()
         {
@@ -31,6 +31,36 @@ namespace eLearning.Controllers
             ViewBag.Message = "About page.";
 
             return View();
+        }
+
+        public PartialViewResult _NavTiles()
+        {
+            var vm = DataRepo.AllNavTiles.Select(x => new NavTileVM()
+            {
+                Uid = x.Uid,
+                ArticleUid = x.ArticleUid,
+                ArticleDisplay = DataRepo.AllArticles.First(a => a.Uid == x.ArticleUid).Display,
+                CertName = x.CertName,
+                CertUid = x.CertUid,
+                Display = x.Dispaly
+            }).ToArray();
+
+            return PartialView(@"~/Views/Shared/Partials/_NavTiles.cshtml", vm);
+        }
+
+        public PartialViewResult _NavBar()
+        {
+            Func<NavBarItem, NavBarItemVM> itemMapper = null;
+            itemMapper = new Func<NavBarItem, NavBarItemVM>(item => new NavBarItemVM()
+            {
+                ArticleUid = item.ArticleUid,
+                Display = item.Display,
+                Items = item.Items.Select(itemMapper).ToArray()
+            });
+
+            var vm = DataRepo.AllNavBarItems.Select(itemMapper).ToArray();
+
+            return PartialView("~/Views/Shared/Partials/_NavBar.cshtml", vm);
         }
     }
 }

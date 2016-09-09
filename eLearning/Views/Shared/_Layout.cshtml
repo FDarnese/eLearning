@@ -10,7 +10,8 @@
 <body>
         @if (!IsSectionDefined("navbar"))
         {
-            @Html.Partial("~/Views/Shared/Partials/_NavDefault.cshtml")
+            <!-- JSON configured navbar will be diaplayed here by default -->
+            @Html.Action("_NavBar", "Home")
         }
         else
         {

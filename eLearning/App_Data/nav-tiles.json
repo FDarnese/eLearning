@@ -1,0 +1,23 @@
+﻿[
+  {
+    "uid": "html",
+    "display": "HTML",
+    "article-uid": "learn-html",
+    "cert-name": "HTML Certification",
+    "cert-uid": "not-ready-yet"
+  },
+  {
+    "uid": "css",
+    "display": "CSS",
+    "article-uid": "learn-css",
+    "cert-name": "CSS Certification",
+    "cert-uid": "not-ready-yet"
+  },
+  {
+    "uid": "js",
+    "display": "JavaScript",
+    "article-uid": "learn-js",
+    "cert-name": "JavaScript Certification",
+    "cert-uid": "not-ready-yet"
+  }
+]

@@ -6,50 +6,23 @@ using System.Web;
 
 namespace eLearning.Controllers
 {
-    public class ArticlesController : Controller
+    public class ArticlesController : BaseController
     {
-        private readonly ArticlesRepository repo = new ArticlesRepository();
-
-        protected override void OnResultExecuting(ResultExecutingContext filterContext)
-        {
-            filterContext.Controller.ViewBag.FeaturedArticles = repo.AllArticles.Where(x => x.Featured).Select(x => new ArticleVM()
-            {
-                Uid = x.Uid,
-                Display = x.Display,
-                Description = x.Description
-            }).ToArray();
-
-            base.OnResultExecuting(filterContext);
-        }
-
         // GET: Articles
         public ActionResult Index()
         {
-            var all = repo.AllArticles.ToArray();
+            var all = DataRepo.AllArticles.ToArray();
             return View();
         }
 
-        public ActionResult Article(string id)
+        public ActionResult Article(string id, string chapterId)
         {
-            var article = repo.AllArticles.FirstOrDefault(x => x.Uid == id);
+            var article = DataRepo.AllArticles.FirstOrDefault(x => x.Uid == id);
             if (article == null)
                 throw new HttpException(404, "Article not found");
 
-            var vm = new ArticleVM()
-            {
-                Uid = article.Uid,
-                Display = article.Display,
-                Description = article.Description
-            };
-
-            return View(vm);
-        }
-
-        public ActionResult Chapter(string id, string chapterId)
-        {
-            var article = repo.AllArticles.FirstOrDefault(x => x.Uid == id);
-            if (article == null)
-                throw new HttpException(404, "Article not found");
+            if (string.IsNullOrWhiteSpace(chapterId))
+                chapterId = article.Chapters.FirstOrDefault(x => string.IsNullOrWhiteSpace(x.Separator))?.Uid;
 
             var chapter = article.Chapters.FirstOrDefault(x => x.Uid == chapterId);
             if (chapter == null)
@@ -72,7 +45,7 @@ namespace eLearning.Controllers
         {
             var vm = new DictionaryVM()
             {
-                Categories = repo.AllCategories.Select(x => new DictionaryCategoryItemVM()
+                Categories = DataRepo.AllCategories.Select(x => new DictionaryCategoryItemVM()
                 {
                     Uid = x.Uid,
                     Display = x.Display,
@@ -91,7 +64,7 @@ namespace eLearning.Controllers
 
         public PartialViewResult _Contents(string id)
         {
-            var article = repo.AllArticles.FirstOrDefault(x => x.Uid == id);
+            var article = DataRepo.AllArticles.FirstOrDefault(x => x.Uid == id);
             if (article == null)
                 throw new HttpException(404, "Article not found");
 
@@ -102,6 +75,7 @@ namespace eLearning.Controllers
                 Contents = article.Chapters.Select(x => new ContentsItemVM()
                 {
                     Uid = x.Uid,
+                    Separator = x.Separator,
                     Display = x.Display,
                     Content = x.Content
                 })

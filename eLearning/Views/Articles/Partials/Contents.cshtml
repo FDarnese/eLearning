@@ -2,11 +2,24 @@
 
 <h1>@Model.ArticleDisplay</h1>
 
+@{ 
+    var currentChapterId = ViewContext.RouteData.Values["chapterId"] as string;
+}
+
 <ul>
     @foreach (var chapter in Model.Contents)
     {
-        <li>
-            <a href="@Url.Action("Chapter", "Articles", new { Id = Model.ArticleUid, ChapterId = chapter.Uid })">@chapter.Display</a>
-        </li>
+        if (string.IsNullOrWhiteSpace(chapter.Separator))
+        {
+            <li class="chapter @(chapter.Uid == currentChapterId ? "active" : string.Empty)">
+                <a href="@Url.Action("Article", "Articles", new { Id = Model.ArticleUid, ChapterId = chapter.Uid })">@chapter.Display</a>
+            </li>
+        }
+        else
+        {
+            <li class="separator">
+                <h4>@chapter.Separator</h4>
+            </li>
+        }
     }
 </ul>

@@ -1,18 +1,24 @@
 ﻿[
   {
     "uid": "html",
-    "display": "HTML5",
+    "display": "HTML5 and CSS",
     "articles": [
       {
-        "uid": "introduction",
+        "uid": "learn-html",
         "display": "Introduction to HTML",
         "description": "At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.",
         "featured": true,
         "chapters": [
           {
+            "separator": "Basic concepts"
+          },
+          {
             "uid": "content",
             "display": "Table of contents",
             "content": "html/content.html"
+          },
+          {
+            "separator": "Advanced stuff"
           },
           {
             "uid": "section-2",
@@ -20,15 +26,9 @@
             "content": "html/section2.html"
           }
         ]
-      }
-    ]
-  },
-  {
-    "uid": "css",
-    "display": "CSS",
-    "articles": [
+      },
       {
-        "uid": "css-advanced",
+        "uid": "learn-css",
         "display": "CSS advanced concepts",
         "description": "You will learn how to ....",
         "featured": true,
@@ -58,7 +58,7 @@
     "display": "JavaScript",
     "articles": [
       {
-        "uid": "js-beginning",
+        "uid": "learn-js",
         "display": "Basic JavaScript concepts",
         "description": "You will learn how to ....",
         "featured": true,
@@ -78,16 +78,7 @@
             "uid": "chapter-3-advanced",
             "display": "Chapter 3 of JavaScript basics",
             "content": "js-beginning/chapter3.html"
-          }
-        ]
-      },
-      {
-        "uid": "js-functions",
-        "display": "JavaScript functions and callbacks",
-        "description": "You will learn how to ....",
-        "featured": false,
-
-        "chapters": [
+          },
           {
             "uid": "chapter-1-advanced",
             "display": "Chapter 1 of JavaScript functions",
@@ -104,6 +95,13 @@
             "content": "js-functions/chapter3.html"
           }
         ]
+      },
+      {
+        "uid": "angular",
+        "display": "AngularJS",
+        "description": "AngularJS tutorial",
+        "featured": false,
+        "chapters": [ ]
       }
     ]
   }

@@ -1,14 +1,29 @@
-﻿@model ArticleVM
+﻿@model ChapterVM
 @{
-    ViewBag.Title = "Article";
+    ViewBag.Title = "Chapter";
 }
 
-@section navbar{
-    @Html.Partial("~/Views/Shared/Partials/_NavFeaturedArticles.cshtml")
-}
+<h2>Chapter @Model.Display</h2>
 
-<h2>Article @Model.Display</h2>
-<p>@Model.Description</p>
+<div class="row">
 
-@Html.Action("_Contents", "Articles", new { Id = Model.Uid })
+    <div class="col-md-4">
+        @Html.Action("_Contents", "Articles", new { Id = Model.ArticleUid })
+    </div>
 
+    <div class="col-md-8">
+        @if (!string.IsNullOrWhiteSpace(Model.PreviousUid))
+        {
+            <a href="@Url.Action("Article", "Articles", new { Id = Model.ArticleUid, ChapterId = Model.PreviousUid })">Previous chapter</a>
+        }
+
+        @if (!string.IsNullOrWhiteSpace(Model.NextUid))
+        {
+            <a href="@Url.Action("Article", "Articles", new { Id = Model.ArticleUid, ChapterId = Model.NextUid})">Next chapter</a>
+        }
+
+        <div class="body-content">
+            @Html.Raw(Model.ContentHtml)
+        </div>
+    </div>
+</div>
